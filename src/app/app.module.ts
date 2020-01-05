@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
+import { PesquisaCidadesComponent } from './pesquisa-cidades/pesquisa-cidades.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    PesquisaCidadesComponent
   ],
   imports: [
     BrowserModule
