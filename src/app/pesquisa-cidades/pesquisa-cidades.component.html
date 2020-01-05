@@ -1,7 +1,41 @@
-<form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Endereço de email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-      <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+<div class="container-fluid">
+    <h1>Cidades</h1>
+
+    <div>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Encontre uma cidade">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="estado">Estado</label>
+                    <select id="estado" class="form-control">
+                    <option selected>Todos</option>
+                    <option>Ceará</option>
+                    <option>Pernambuco</option>
+                    </select>
+                </div>
+            </div>
+        </form>
     </div>
-</form>
+
+    <div>
+        <table class="table ebus-tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th class="text-center">Estado</th>
+                    <th class="text-center"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cidade of cidades">
+                    <td>{{cidade.nome}}</td>
+                    <td class="text-center">{{cidade.estado}}</td>
+                    <td class="text-center"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
