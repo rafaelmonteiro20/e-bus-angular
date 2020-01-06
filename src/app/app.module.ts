@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
-import { PesquisaCidadesComponent } from './pesquisa-cidades/pesquisa-cidades.component';
+import { CidadeModule } from './cidade/cidade.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    PesquisaCidadesComponent
+    HelloComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CidadeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
