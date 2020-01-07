@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CidadeService } from '../cidade.service';
 
 @Component({
   selector: 'app-pesquisa-cidades',
@@ -7,15 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaCidadesComponent implements OnInit {
 
-  cidades = [
-    { id:1, nome:'Fortaleza', estado:'Ceará' },
-    { id:2, nome:'Quixadá', estado:'Ceará' },
-    { id:3, nome:'Recife', estado:'Pernambuco' }
-  ];
+  cidades = [];
 
-  constructor() { }
+  constructor(private cidadeService: CidadeService) { }
 
   ngOnInit() {
+    this.cidades = this.cidadeService.pesquisa();
   }
 
 }
