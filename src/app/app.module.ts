@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
-import { CidadeModule } from './cidade/cidade.module';
+import { CidadeModule } from './cidades/cidade.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { CidadeModule } from './cidade/cidade.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CidadeModule
   ],
   providers: [],

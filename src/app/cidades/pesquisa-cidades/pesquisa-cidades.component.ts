@@ -13,7 +13,12 @@ export class PesquisaCidadesComponent implements OnInit {
   constructor(private cidadeService: CidadeService) { }
 
   ngOnInit() {
-    this.cidades = this.cidadeService.pesquisa();
+    this.pesquisa();
+  }
+
+  pesquisa() {
+    this.cidadeService.pesquisa()
+        .then((cidades) => this.cidades = cidades);
   }
 
 }
