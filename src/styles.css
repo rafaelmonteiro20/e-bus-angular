@@ -1,5 +1,12 @@
 body {
-    font-size: 1rem;
+    font-size: 14px;
+}
+
+h1 {
+    color: #2e2e2e;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .table thead th {
@@ -8,5 +15,54 @@ body {
 
 .ebus-tabela thead th {
     background-color: #fafafa;
-    font-weight: 400;
+    font-weight: 600;
+}
+
+.bg-blue {
+    background: #007db8;
+}
+
+.form-control {
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 3px;
+}
+
+label {
+    font-weight: 600;
+}
+
+.btn {
+    font-size: 14px;
+}
+
+.breadcrumb-container {
+    background-color: #fafafa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    border-radius: 0px;
+    padding: .6rem 1rem;
+    font-size: 12px;
+    position: fixed;
+    top:56px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+
+.content {
+    margin-top: 110px;
+}
+
+.title {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
 }

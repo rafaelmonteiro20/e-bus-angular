@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CidadeService } from '../cidade.service';
+import { CidadeService, CidadeFilter } from '../cidade.service';
 
 @Component({
   selector: 'app-pesquisa-cidades',
@@ -9,6 +9,7 @@ import { CidadeService } from '../cidade.service';
 export class PesquisaCidadesComponent implements OnInit {
 
   cidades = [];
+  nome: string;
 
   constructor(private cidadeService: CidadeService) { }
 
@@ -17,7 +18,7 @@ export class PesquisaCidadesComponent implements OnInit {
   }
 
   pesquisa() {
-    this.cidadeService.pesquisa()
+    this.cidadeService.pesquisa({ nome: this.nome })
         .then((cidades) => this.cidades = cidades);
   }
 

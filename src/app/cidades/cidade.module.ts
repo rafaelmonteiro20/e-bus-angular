@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { PesquisaCidadesComponent } from './pesquisa-cidades/pesquisa-cidades.component';
 import { CidadeService } from './cidade.service';
@@ -9,7 +10,8 @@ import { CidadeService } from './cidade.service';
     PesquisaCidadesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     PesquisaCidadesComponent

@@ -1,2 +1,27 @@
-<!--<app-hello></app-hello> -->
-<app-pesquisa-cidades></app-pesquisa-cidades>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-blue">
+    <div class="container">
+        <a class="navbar-brand" href="#">E-Bus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Cidades <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="breadcrumb-container container" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cidades</li>
+    </ol>
+</nav>
+
+<div class="container content">
+    <app-pesquisa-cidades></app-pesquisa-cidades>
+</div>

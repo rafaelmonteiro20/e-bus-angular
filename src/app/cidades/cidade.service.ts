@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+
+export interface CidadeFilter {
+  nome: string;
+}
 
 @Injectable()
 export class CidadeService {
@@ -8,10 +12,18 @@ export class CidadeService {
 
   constructor(private http: HttpClient) { }
 
-  pesquisa(): Promise<any> {
-    return this.http.get(this.urlCidades)
-            .toPromise()
-            .then(response => response);
+  pesquisa(filtro: CidadeFilter): Promise<any> {
+    let params = new HttpParams();
+
+    if (filtro.nome) {
+      params = params.set('nome', filtro.nome);
+    }
+
+    console.log(filtro.nome);
+
+    return this.http.get(this.urlCidades, { params })
+              .toPromise()
+              .then(response => response['content']);
   }
 
 }

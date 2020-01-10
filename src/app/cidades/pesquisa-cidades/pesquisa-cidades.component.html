@@ -1,20 +1,27 @@
-<div class="container-fluid">
-    <h1>Cidades</h1>
+<div>
+    <div class="title">
+        <h1>Cidades</h1>
+    </div>
 
     <div>
-        <form>
+        <form autocomplete="off">
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Encontre uma cidade">
+                    <input type="text" name="nome" [(ngModel)]="nome"
+                        class="form-control" placeholder="Encontre uma cidade...">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="estado">Estado</label>
                     <select id="estado" class="form-control">
-                    <option selected>Todos</option>
-                    <option>Ceará</option>
+                    <option selected>Estados: Todos</option>
+                    <option>Ceará</option >
                     <option>Pernambuco</option>
                     </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <button type="button" class="btn btn-primary" (click)="pesquisa()">Pesquisar</button>
+                </div>
+                <div class="form-group col-md-3 text-right">
+                    <button type="button" class="btn btn-success">Criar Cidade</button>
                 </div>
             </div>
         </form>
