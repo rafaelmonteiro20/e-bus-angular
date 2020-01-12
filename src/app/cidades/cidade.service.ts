@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-export interface CidadeFilter {
+export class CidadeFilter {
   nome: string;
+  pagina: number;
+  totalPorPagina = 10;
 }
 
 @Injectable()
@@ -19,11 +21,19 @@ export class CidadeService {
       params = params.set('nome', filtro.nome);
     }
 
-    console.log(filtro.nome);
+    if (filtro.pagina) {
+      params = params.set('page', filtro.pagina.toString());
+    }
 
     return this.http.get(this.urlCidades, { params })
-              .toPromise()
-              .then(response => response['content']);
+      .toPromise()
+      .then(response => {
+        const resultado = {
+          lancamentos: response['content'],
+          total: response['totalElements']
+        }
+        return resultado;
+      });
   }
 
 }

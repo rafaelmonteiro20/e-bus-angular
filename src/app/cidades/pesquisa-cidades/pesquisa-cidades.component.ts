@@ -8,8 +8,9 @@ import { CidadeService, CidadeFilter } from '../cidade.service';
 })
 export class PesquisaCidadesComponent implements OnInit {
 
+  filtro = new CidadeFilter();
   cidades = [];
-  nome: string;
+  totalItens: number;
 
   constructor(private cidadeService: CidadeService) { }
 
@@ -17,9 +18,17 @@ export class PesquisaCidadesComponent implements OnInit {
     this.pesquisa();
   }
 
-  pesquisa() {
-    this.cidadeService.pesquisa({ nome: this.nome })
-        .then((cidades) => this.cidades = cidades);
+  pesquisa(pagina: number = null) {
+    this.filtro.pagina = pagina;
+    this.cidadeService.pesquisa(this.filtro)
+      .then(resultado => {
+        this.cidades = resultado.lancamentos,
+        this.totalItens = resultado.total
+      });
+  }
+
+  paginaMudada(event: any) {
+    this.pesquisa(event.page - 1);
   }
 
 }
