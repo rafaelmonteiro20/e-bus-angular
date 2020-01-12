@@ -4,7 +4,7 @@ body {
 
 h1 {
     color: #2e2e2e;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -38,7 +38,7 @@ label {
 
 .breadcrumb-container {
     background-color: #fafafa;
-    border-bottom: 1px solid #dee2e6;
+    margin-top: 56px;
 }
 
 .breadcrumb {
@@ -46,11 +46,6 @@ label {
     border-radius: 0px;
     padding: .6rem 1rem;
     font-size: 12px;
-    position: fixed;
-    top:56px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -59,7 +54,7 @@ label {
 }
 
 .content {
-    margin-top: 110px;
+    margin-top: 10px;
 }
 
 .title {
