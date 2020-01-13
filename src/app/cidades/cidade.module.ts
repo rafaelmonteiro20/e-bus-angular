@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 
-import { PesquisaCidadesComponent } from './pesquisa-cidades/pesquisa-cidades.component';
 import { CidadeService } from './cidade.service';
+
+import { PesquisaCidadesComponent } from './pesquisa-cidades/pesquisa-cidades.component';
+import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.component';
 
 @NgModule({
   declarations: [
-    PesquisaCidadesComponent
+    PesquisaCidadesComponent,
+    CadastroCidadeComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +19,8 @@ import { CidadeService } from './cidade.service';
     PaginationModule
   ],
   exports: [
-    PesquisaCidadesComponent
+    PesquisaCidadesComponent,
+    CadastroCidadeComponent
   ],
   providers: [
     CidadeService
