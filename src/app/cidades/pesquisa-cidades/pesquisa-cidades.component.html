@@ -11,10 +11,10 @@
                         placeholder="Encontre uma cidade...">
                 </div>
                 <div class="form-group col-md-3">
-                    <select id="estado" class="form-control">
-                        <option selected>Estados: Todos</option>
-                        <option>Ceará</option>
-                        <option>Pernambuco</option>
+                    <select id="estado" name="estado" [(ngModel)]="filtro.estado" class="form-control">
+                        <option value="" selected>Estados: Todos</option>
+                        <option value="CE">Ceará</option>
+                        <option value="PE">Pernambuco</option>
                     </select>
                 </div>
                 <div class="form-group col-md-3">

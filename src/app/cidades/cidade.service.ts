@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 export class CidadeFilter {
   nome: string;
+  estado: string = "";
   pagina: number;
   totalPorPagina = 10;
 }
@@ -19,6 +20,10 @@ export class CidadeService {
 
     if (filtro.nome) {
       params = params.set('nome', filtro.nome);
+    }
+
+    if (filtro.estado) {
+      params = params.set('estado', filtro.estado);
     }
 
     if (filtro.pagina) {
