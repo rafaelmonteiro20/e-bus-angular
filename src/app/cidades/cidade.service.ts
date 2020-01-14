@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 
 export class CidadeFilter {
   nome: string;
   estado: string = "";
   pagina: number;
   totalPorPagina = 10;
+}
+
+export class Cidade {
+  nome: string;
+  estado: string = "";
 }
 
 @Injectable()
@@ -39,6 +44,13 @@ export class CidadeService {
         }
         return resultado;
       });
+  }
+
+  salva(cidade: Cidade) : Promise<any> {
+    let headers = new HttpHeaders();
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post<Cidade>(this.urlCidades, cidade, { headers })
+      .toPromise();
   }
 
 }

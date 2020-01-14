@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+import { CidadeService, Cidade } from '../cidade.service';
 
 @Component({
   selector: 'app-cadastro-cidade',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroCidadeComponent implements OnInit {
 
-  constructor() { }
+  cidade = new Cidade();
+
+  constructor(private cidadeService: CidadeService) { }
 
   ngOnInit() {
+  }
+
+  salva(form: FormControl) {
+    this.cidadeService.salva(this.cidade)
+      .then(() => {
+        form.reset();
+        this.cidade = new Cidade();
+      });
   }
 
 }
