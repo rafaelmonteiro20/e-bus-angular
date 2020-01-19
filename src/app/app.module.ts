@@ -8,6 +8,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { CidadeModule } from './cidades/cidade.module';
+import { TrechosModule } from './trechos/trechos.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CidadeModule } from './cidades/cidade.module';
     HttpClientModule,
     FormsModule,
     CidadeModule,
+    TrechosModule,
     PaginationModule.forRoot()
   ],
   providers: [],
