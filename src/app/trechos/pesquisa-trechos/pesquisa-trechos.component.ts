@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TrechoService } from '../trecho.service';
 
 @Component({
   selector: 'app-pesquisa-trechos',
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaTrechosComponent implements OnInit {
 
-  trechos:any = [];
+  trechos = [];
 
-  constructor() { }
+  constructor(private trechoService: TrechoService) { }
 
   ngOnInit() {
+    this.pesquisa();
+  }
+
+  pesquisa() {
+    this.trechoService.pesquisa()
+      .then(trechos => this.trechos = trechos);
   }
 
 }

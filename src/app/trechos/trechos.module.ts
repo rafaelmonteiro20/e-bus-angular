@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PesquisaTrechosComponent } from './pesquisa-trechos/pesquisa-trechos.component';
-
-
+import { TrechoService } from './trecho.service';
 
 @NgModule({
   declarations: [
@@ -13,6 +12,9 @@ import { PesquisaTrechosComponent } from './pesquisa-trechos/pesquisa-trechos.co
   ],
   exports: [
     PesquisaTrechosComponent
+  ],
+  providers: [
+    TrechoService
   ]
 })
 export class TrechosModule { }

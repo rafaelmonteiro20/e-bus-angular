@@ -29,14 +29,14 @@
             <thead>
                 <tr>
                     <th>Origem</th>
-                    <th>Destino</th>
+                    <th>Destino</th>  
                     <th class="text-center">Distância</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let trecho of trechos">
-                    <td>{{trecho.origem}}</td>
-                    <td class="text-center">{{trecho.destino}}</td>
+                    <td>{{trecho.origem.nome}}</td>
+                    <td>{{trecho.destino.nome}}</td>
                     <td class="text-center">{{trecho.distancia}}</td>
                 </tr>
             </tbody>
