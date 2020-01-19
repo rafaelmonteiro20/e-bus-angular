@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaTrechosComponent implements OnInit {
 
+  trechos:any = [];
+
   constructor() { }
 
   ngOnInit() {
