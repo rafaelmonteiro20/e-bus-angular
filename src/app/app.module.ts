@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
 import { CidadeModule } from './cidades/cidade.module';
 import { TrechosModule } from './trechos/trechos.module';
 import { AppRoutingModule } from './app.routing.module';
@@ -14,8 +13,7 @@ import { ErrosModule } from './erros/erros.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HelloComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
