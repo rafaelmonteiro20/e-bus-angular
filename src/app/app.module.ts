@@ -10,6 +10,7 @@ import { HelloComponent } from './hello/hello.component';
 import { CidadeModule } from './cidades/cidade.module';
 import { TrechosModule } from './trechos/trechos.module';
 import { AppRoutingModule } from './app.routing.module';
+import { ErrosModule } from './erros/erros.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app.routing.module';
     CidadeModule,
     TrechosModule,
     PaginationModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    ErrosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
