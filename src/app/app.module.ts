@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { CidadeModule } from './cidades/cidade.module';
 import { TrechosModule } from './trechos/trechos.module';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TrechosModule } from './trechos/trechos.module';
     FormsModule,
     CidadeModule,
     TrechosModule,
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
